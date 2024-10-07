@@ -15,6 +15,6 @@ public:
 protected:
     UFUNCTION()
     void OnActionEvent(UBeingAction* action, EBeingActionEventType EventType);
-    
+
 };
 

@@ -29,5 +29,19 @@ public:
     
     UBlooberNiagaraAkAudioPlayer();
 
+    virtual FNiagaraDataInterfaceParametersCS* CreateShaderStorage(const FNiagaraDataInterfaceGPUParamInfo& ParameterInfo, const FShaderParameterMap& ParameterMap) const;
+
+    virtual void BindParameters(struct FNiagaraDataInterfaceParametersCS *,struct FNiagaraDataInterfaceGPUParamInfo const &,class FShaderParameterMap const &) override;
+    virtual void SetParameters(struct FNiagaraDataInterfaceParametersCS const *,class FRHICommandList &,struct FNiagaraDataInterfaceSetArgs const &) const override;
+    virtual void UnsetParameters(struct FNiagaraDataInterfaceParametersCS const *,class FRHICommandList &,struct FNiagaraDataInterfaceSetArgs const &) const override;
+    virtual void BuildShaderParameters(class FNiagaraShaderParametersBuilder&) const override;
+    virtual struct FTypeLayoutDesc const * GetComputeParametersTypeDesc() const override;
+    virtual struct FNiagaraDataInterfaceParametersCS* CreateComputeParameters() const;
+
+    virtual FTypeLayoutDesc* GetShaderStorageType() const override;
+
+    virtual bool HasInternalAttributeReads(class UNiagaraEmitter const *,class UNiagaraEmitter const *) const override;
+    virtual bool UseLegacyShaderBindings() const override;
+
 };
 

@@ -17,6 +17,18 @@
 	],
 	"Plugins": [
 		{
+			"Name": "ProceduralMeshComponent",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayCameras",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
 			"Name": "OnlineSubsystemSteam",
 			"Enabled": true
 		},
@@ -88,7 +100,7 @@
 			"Name": "GameBase",
 			"Enabled": true
 		},
-        		{
+		{
 			"Name": "SimpleSpawnPoints",
 			"Enabled": true
 		},
@@ -120,11 +132,11 @@
 			"Name": "SplineMeshEx",
 			"Enabled": true
 		},
-        		{
+		{
 			"Name": "MaterialsSplineCtrl",
 			"Enabled": true
 		},
-        		{
+		{
 			"Name": "BlooberWwise",
 			"Enabled": true
 		},
@@ -138,7 +150,26 @@
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/d91461c6f5544d118198d6acaddb48e8"
 		},
-
+		{
+			"Name": "Cutscenes",
+			"Enabled": true
+		},
+		{
+			"Name": "UCA",
+			"Enabled": true
+		},
+		{
+			"Name": "LocalizationTools",
+			"Enabled": true
+		},
+		{
+			"Name": "UCCE",
+			"Enabled": true
+		},
+		{
+			"Name": "Wwise",
+			"Enabled": true
+		}
 	],
 	"TargetPlatforms": [
 		"WindowsNoEditor",

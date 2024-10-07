@@ -15,6 +15,7 @@ public class Mai : ModuleRules {
             "DeveloperSettings",
             "Engine",
             "GameplayTags",
+            "GameplayTasks",
             "NavigationSystem",
             "NinjaCharacter",
         });
