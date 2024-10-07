@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "",
+	"FriendlyName": "Foliage stamps",
+	"Description": "Foliage stamps tool",
+	"Category": "BlooberTeam",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FoliageStamps",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

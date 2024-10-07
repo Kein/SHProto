@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "",
+	"FriendlyName": "Detection",
+	"Description": "Used for detecting objects with raycasts",
+	"Category": "BlooberTeam",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "http://git.blooberteam.com/SharedUe4/Detection",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Detection",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Log",
+			"Enabled": true
+		},
+		{
+			"Name": "Foundations",
+			"Enabled": true
+		}
+	]
+}

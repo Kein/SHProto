@@ -1,0 +1,42 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "",
+	"FriendlyName": "SimpleSpawnPoints",
+	"Description": "",
+	"Category": "BlooberTeam",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "http://git.blooberteam.com/SharedUe4/SimpleSpawnPoints/wikis/home",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SimpleSpawnPoints",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Log",
+			"Enabled": true
+		},
+		{
+			"Name": "Foundations",
+			"Enabled": true
+		},
+		{
+			"Name": "LevelStreaming",
+			"Enabled": true
+		},
+		{
+			"Name": "UCW",
+			"Enabled": true
+		}
+	]
+}

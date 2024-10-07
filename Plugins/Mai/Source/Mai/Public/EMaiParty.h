@@ -1,0 +1,45 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EMaiParty.generated.h"
+
+UENUM(BlueprintType)
+enum class EMaiParty : uint8 {
+    PARTY_0,
+    PARTY_1,
+    PARTY_2,
+    PARTY_3,
+    PARTY_4,
+    PARTY_5,
+    PARTY_6,
+    PARTY_7,
+    PARTY_8,
+    PARTY_9,
+    PARTY_10,
+    PARTY_11,
+    PARTY_12,
+    PARTY_13,
+    PARTY_14,
+    PARTY_15,
+    PARTY_16,
+    PARTY_17,
+    PARTY_18,
+    PARTY_19,
+    PARTY_20,
+    PARTY_21,
+    PARTY_22,
+    PARTY_23,
+    PARTY_24,
+    PARTY_25,
+    PARTY_26,
+    PARTY_27,
+    PARTY_28,
+    PARTY_29,
+    PARTY_30,
+    PARTY_31,
+    ALLY = 251,
+    NEUTRAL,
+    ENEMY,
+    PLAYER,
+    NONE,
+};
+

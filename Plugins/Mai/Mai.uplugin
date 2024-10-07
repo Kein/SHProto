@@ -1,0 +1,43 @@
+{
+	"FileVersion": 3,
+	"Version": 6,
+	"VersionName": "",
+	"FriendlyName": "Mai",
+	"Description": "Plugin for AI",
+	"Category": "BlooberTeam",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "git@git.blooberteam.com:SharedUe4/Mai.git",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Mai",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Sai",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EveryDai",
+			"Enabled": true
+		},
+		{
+			"Name": "LevelStreaming",
+			"Enabled": true
+		},
+		{
+			"Name": "NinjaCharacter",
+			"Enabled": true
+		}
+	]
+}
