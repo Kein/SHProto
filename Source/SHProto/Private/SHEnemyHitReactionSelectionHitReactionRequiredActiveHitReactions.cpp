@@ -1,0 +1,5 @@
+#include "SHEnemyHitReactionSelectionHitReactionRequiredActiveHitReactions.h"
+
+FSHEnemyHitReactionSelectionHitReactionRequiredActiveHitReactions::FSHEnemyHitReactionSelectionHitReactionRequiredActiveHitReactions() {
+}
+

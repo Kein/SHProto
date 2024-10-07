@@ -1,0 +1,148 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "SHProto",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"UMG",
+				"AIModule"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "Water",
+			"Enabled": true
+		},
+		{
+			"Name": "ControlRig",
+			"Enabled": true
+		},
+		{
+			"Name": "MovieRenderPipeline",
+			"Enabled": true
+		},
+		{
+			"Name": "JsonBlueprintUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "DataValidation",
+			"Enabled": true
+		},
+		{
+			"Name": "BinkMedia",
+			"Enabled": true
+		},
+		{
+			"Name": "Log",
+			"Enabled": true
+		},
+		{
+			"Name": "InputRebinding",
+			"Enabled": true
+		},
+		{
+			"Name": "UCW",
+			"Enabled": true
+		},
+		{
+			"Name": "LevelStreaming",
+			"Enabled": true
+		},
+		{
+			"Name": "PostprocessVolumeEx",
+			"Enabled": true
+		},
+		{
+			"Name": "InstancedMeshEx",
+			"Enabled": true
+		},
+		{
+			"Name": "GameBase",
+			"Enabled": true
+		},
+        		{
+			"Name": "SimpleSpawnPoints",
+			"Enabled": true
+		},
+		{
+			"Name": "Detection",
+			"Enabled": true
+		},
+		{
+			"Name": "Dialog",
+			"Enabled": true
+		},
+		{
+			"Name": "EveryDai",
+			"Enabled": true
+		},
+		{
+			"Name": "Foundations",
+			"Enabled": true
+		},
+		{
+			"Name": "GlobalProperties",
+			"Enabled": true
+		},
+		{
+			"Name": "Mai",
+			"Enabled": true
+		},
+		{
+			"Name": "SplineMeshEx",
+			"Enabled": true
+		},
+        		{
+			"Name": "MaterialsSplineCtrl",
+			"Enabled": true
+		},
+        		{
+			"Name": "BlooberWwise",
+			"Enabled": true
+		},
+		{
+			"Name": "CustomAnimNode",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8901af6d589b40b68d763b44c9ced66c"
+		},
+		{
+			"Name": "NinjaCharacter",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/d91461c6f5544d118198d6acaddb48e8"
+		},
+
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor",
+		"Windows",
+		"Win64"
+	]
+}

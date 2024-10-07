@@ -1,0 +1,30 @@
+#include "SHBloodPuddle.h"
+#include "Components/DecalComponent.h"
+#include "Components/SceneComponent.h"
+
+ASHBloodPuddle::ASHBloodPuddle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bSaveGame = true;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->DecalPuddle = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalPuddle"));
+    this->ErosionCurve = NULL;
+    this->TimeToFillPuddle = 7.00f;
+    this->VisibleFactorParameterName = TEXT("Opacity | Erosion | Step");
+    this->FadeAwayTime = 30.00f;
+    this->EnableAutoFadeAway = false;
+    this->DelayToFadeAway = 30.00f;
+    this->DestroyAfterFadeAway = true;
+    this->DecalMaterialDynamic = NULL;
+    this->DecalPuddle->SetupAttachment(RootComponent);
+}
+
+
+
+
+bool ASHBloodPuddle::IsFullyDeveloped() const {
+    return false;
+}
+
+void ASHBloodPuddle::EnableFadeAway() {
+}
+
+
