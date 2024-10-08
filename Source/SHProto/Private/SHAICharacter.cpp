@@ -5,9 +5,10 @@
 #include "SHFXComponent.h"
 
 ASHAICharacter::ASHAICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USHAICharacterMovementComponent>(TEXT("CharMoveComp"))) {
-    this->PlayerCameraOverlapHandlerComponent = CreateDefaultSubobject<USHEnemyCameraOverlapHandleComponent>(TEXT("PlayerCameraOverlapHandlerComponent"));
-    this->AIWeaponManagerComponent = CreateDefaultSubobject<USHAIWeaponManagerComponent>(TEXT("AIWeaponManagerComponent"));
-    this->FXComponent = CreateDefaultSubobject<USHFXComponent>(TEXT("FXComponent"));
+    // FIXME
+    // this->PlayerCameraOverlapHandlerComponent = CreateDefaultSubobject<USHEnemyCameraOverlapHandleComponent>(TEXT("PlayerCameraOverlapHandlerComponent"));
+    // this->AIWeaponManagerComponent = CreateDefaultSubobject<USHAIWeaponManagerComponent>(TEXT("AIWeaponManagerComponent"));
+    // this->FXComponent = CreateDefaultSubobject<USHFXComponent>(TEXT("FXComponent"));
     this->_FinishersTable = NULL;
     this->AnimComponent = NULL;
     this->healthComponent = NULL;

@@ -8,7 +8,8 @@ ASHItemWeaponMelee::ASHItemWeaponMelee(const FObjectInitializer& ObjectInitializ
     this->StandingBehindRequiredDotProduct = -0.71f;
     this->ForceFeedbackOnDamage = NULL;
     this->CameraAnimExe = NULL;
-    this->WeaponItemAudioComponent->SetupAttachment(RootComponent);
+	// FIXME
+    // this->WeaponItemAudioComponent->SetupAttachment(RootComponent);
 }
 
 bool ASHItemWeaponMelee::WillKillCharacter(ACharacter* CheckedCharacter) const {

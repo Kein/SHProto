@@ -3,9 +3,10 @@
 #include "SHCineCameraComponent.h"
 
 ASHCameraAnimationExecutive::ASHCameraAnimationExecutive(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    this->Camera = CreateDefaultSubobject<USHCineCameraComponent>(TEXT("Camera"));
-    this->Camera->SetupAttachment(RootComponent);
+    // FIXME
+    // this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    // this->Camera = CreateDefaultSubobject<USHCineCameraComponent>(TEXT("Camera"));
+    // this->Camera->SetupAttachment(RootComponent);
 }
 
 void ASHCameraAnimationExecutive::SetLockCharacterAttachmentTransform(const FTransform& InTransform) {

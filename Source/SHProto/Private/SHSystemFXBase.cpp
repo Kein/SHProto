@@ -3,15 +3,16 @@
 #include "Components/SceneComponent.h"
 
 ASHSystemFXBase::ASHSystemFXBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    this->ParticlesPivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("ParticlesPivotPoint"));
-    this->DecalPivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("DecalPivotPoint"));
-    this->DecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalComponent"));
+    // FIXME
+    // this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    // this->ParticlesPivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("ParticlesPivotPoint"));
+    // this->DecalPivotPoint = CreateDefaultSubobject<USceneComponent>(TEXT("DecalPivotPoint"));
+    // this->DecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalComponent"));
+    // this->DecalComponent->SetupAttachment(DecalPivotPoint);
+    // this->DecalPivotPoint->SetupAttachment(RootComponent);
+    // this->ParticlesPivotPoint->SetupAttachment(RootComponent);
     this->AssignedSystemFXData = NULL;
     this->AkAudioEventOverride = NULL;
-    this->DecalComponent->SetupAttachment(DecalPivotPoint);
-    this->DecalPivotPoint->SetupAttachment(RootComponent);
-    this->ParticlesPivotPoint->SetupAttachment(RootComponent);
 }
 
 void ASHSystemFXBase::SetSelfDestroyTimeValue(float InValue) {

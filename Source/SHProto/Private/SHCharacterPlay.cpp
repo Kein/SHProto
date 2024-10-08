@@ -33,15 +33,13 @@
 
 ASHCharacterPlay::ASHCharacterPlay(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USHCharacterPlayMovementComponent>(TEXT("CharMoveComp"))) {
     this->DLCSkinStaticMesh = CreateDefaultSubobject<USHCharacterPlayDLCSkinStaticMeshComponent>(TEXT("DLCSkinStaticMesh"));
-    const FProperty* p_Mesh_Parent = GetClass()->FindPropertyByName("Mesh");
     this->View = CreateDefaultSubobject<USHCharacterPlayViewComponent>(TEXT("View"));
     this->SpringArm = CreateDefaultSubobject<USHCharacterPlaySpringArmComponent>(TEXT("SpringArm"));
     this->Camera = CreateDefaultSubobject<USHCharacterPlayCameraComponent>(TEXT("Camera"));
     this->BreathNoise = CreateDefaultSubobject<USHCharacterPlayBreathNoiseComponent>(TEXT("BreathNoise"));
     this->AudioComponent = CreateDefaultSubobject<USHAkCharacterAudioComponent>(TEXT("USHAkCharacterAudioComponent"));
     this->MusicComponent = CreateDefaultSubobject<USHAkMusicComponent>(TEXT("USHAkMusicComponent"));
-    FProperty* p_CharacterMovement_Prior = GetClass()->FindPropertyByName("CharacterMovement");
-    this->Movement = (USHCharacterPlayMovementComponent*)*p_CharacterMovement_Prior->ContainerPtrToValuePtr<USHCharacterPlayMovementComponent*>(this);
+    this->Movement = Cast<USHCharacterPlayMovementComponent>(GetCharacterMovement());
     this->Input = NULL;
     this->RaycastDetector = CreateDefaultSubobject<USHCharacterPlayRaycastDetectorComponent>(TEXT("RaycastDetector"));
     this->GenericSlot = CreateDefaultSubobject<USHCharacterPlayGenericInteractionSlotComponent>(TEXT("GenericSlot"));
@@ -68,7 +66,7 @@ ASHCharacterPlay::ASHCharacterPlay(const FObjectInitializer& ObjectInitializer) 
     this->AudioComponent->SetupAttachment(RootComponent);
     this->BreathNoise->SetupAttachment(RootComponent);
     this->Camera->SetupAttachment(SpringArm);
-    this->DLCSkinStaticMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->DLCSkinStaticMesh->SetupAttachment(RootComponent);
     this->MusicComponent->SetupAttachment(RootComponent);
     this->SpringArm->SetupAttachment(View);
     this->View->SetupAttachment(RootComponent);

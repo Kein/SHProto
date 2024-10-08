@@ -28,12 +28,6 @@ ASHValve::ASHValve(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->SHAkValve = CreateDefaultSubobject<USHAkValveComponent>(TEXT("SHAkValve"));
     this->InteractionManager = CreateDefaultSubobject<USHInteractionManagerComponent>(TEXT("InteractionManager"));
     this->FocusableComponent = CreateDefaultSubobject<USHFocusableComponent>(TEXT("FocusableComponent"));
-    this->RequiredRotatedAngle = 360.00f;
-    this->ValveTurnFirstPhaseAngleCurve = NULL;
-    this->ValveTurnSecondPhaseAngleCurve = NULL;
-    this->InteractingCharacter = NULL;
-    this->LinkedAnimGraphInstance = NULL;
-    this->TotalRotatedAngle = 0.00f;
     this->FlashlightFocusSpot->SetupAttachment(RootComponent);
     this->FocusCamera->SetupAttachment(RootComponent);
     this->InteractionAnimSpot->SetupAttachment(RootComponent);
@@ -45,6 +39,12 @@ ASHValve::ASHValve(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->SHAkValve->SetupAttachment(RootComponent);
     this->ValveMesh->SetupAttachment(ValveMeshPivot);
     this->ValveMeshPivot->SetupAttachment(RootComponent);
+    this->RequiredRotatedAngle = 360.00f;
+    this->ValveTurnFirstPhaseAngleCurve = NULL;
+    this->ValveTurnSecondPhaseAngleCurve = NULL;
+    this->InteractingCharacter = NULL;
+    this->LinkedAnimGraphInstance = NULL;
+    this->TotalRotatedAngle = 0.00f;
 }
 
 void ASHValve::RequestAbortInteraction() {

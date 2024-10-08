@@ -9,6 +9,9 @@ ASHSwarmBase::ASHSwarmBase(const FObjectInitializer& ObjectInitializer) : Super(
     this->_NiagaraComp = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraFX"));
     this->_MainBoundRegion = CreateDefaultSubobject<USHSwarmBoundRegion>(TEXT("BoundRegion_Main"));
     this->_FollowPointsRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FollowPointsRoot"));
+    this->_FollowPointsRoot->SetupAttachment(_NiagaraComp);
+    this->_MainBoundRegion->SetupAttachment(_NiagaraComp);
+    this->_NiagaraComp->SetupAttachment(RootComponent);
     this->CreeperLifetime = 60.00f;
     this->SpawnBurst = 0;
     this->SpawnRate = 100.00f;
@@ -34,9 +37,6 @@ ASHSwarmBase::ASHSwarmBase(const FObjectInitializer& ObjectInitializer) : Super(
     this->_CharacterPlay = NULL;
     this->_FlashlightPtr = NULL;
     this->_SwarmDisabled = false;
-    this->_FollowPointsRoot->SetupAttachment(_NiagaraComp);
-    this->_MainBoundRegion->SetupAttachment(_NiagaraComp);
-    this->_NiagaraComp->SetupAttachment(RootComponent);
 }
 
 void ASHSwarmBase::UpdateStateTime(ESwarmCreeperState State, FVector2D Time) {

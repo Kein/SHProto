@@ -3,14 +3,15 @@
 #include "NiagaraComponent.h"
 
 ASHSimulatedWaterActor::ASHSimulatedWaterActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    // FIXME
     this->RootComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("WaterSimulationNiagara"));
-    this->NiagaraComponent = (UNiagaraComponent*)RootComponent;
     this->WaterPlaneMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WaterPlaneMesh"));
+    this->NiagaraComponent->SetupAttachment(RootComponent);
+    this->WaterPlaneMesh->SetupAttachment(RootComponent);
     this->WaterPlaneSize = 2000.00f;
     this->WaterMaterialTemplate = NULL;
     this->EffectFixedSize = 50;
     this->_DynamicMaterial = NULL;
-    this->WaterPlaneMesh->SetupAttachment(RootComponent);
 }
 
 void ASHSimulatedWaterActor::SetWaterSimulationEnabled(bool IsEnable) {

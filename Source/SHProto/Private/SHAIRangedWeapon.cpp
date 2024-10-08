@@ -2,8 +2,9 @@
 #include "Components/SkeletalMeshComponent.h"
 
 ASHAIRangedWeapon::ASHAIRangedWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
-    this->MeshComponent->SetupAttachment(RootComponent);
+    // FIXME
+    //this->MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
+    //this->MeshComponent->SetupAttachment(RootComponent);
 }
 
 

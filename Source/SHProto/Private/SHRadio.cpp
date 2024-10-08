@@ -2,7 +2,9 @@
 #include "SHAkComponent.h"
 
 ASHRadio::ASHRadio(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->SHAkComponent = CreateDefaultSubobject<USHAkComponent>(TEXT("SHAkComponent"));
+    // FIXME
+    // this->SHAkComponent = CreateDefaultSubobject<USHAkComponent>(TEXT("SHAkComponent"));
+    // this->SHAkComponent->SetupAttachment(RootComponent);
     this->OuterSphereRadius = 2000.00f;
     this->InnerSphereRadius = 1000.00f;
     this->StandardDistanceScoreInfluence = 0.50f;
@@ -16,7 +18,6 @@ ASHRadio::ASHRadio(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->EnableLightsSupport = true;
     this->LightsSensitivityMin = 0.50f;
     this->LightsSensitivityFull = 30.00f;
-    this->SHAkComponent->SetupAttachment(RootComponent);
 }
 
 void ASHRadio::SHDebug_Character_Items_Radio_ValuesDebug() {

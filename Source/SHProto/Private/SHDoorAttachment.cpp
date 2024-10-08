@@ -8,21 +8,22 @@
 #include "SHRaycastDetectableComponent.h"
 
 ASHDoorAttachment::ASHDoorAttachment(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->InteractionGeneric = CreateDefaultSubobject<USHInteractionGenericComponent>(TEXT("InteractionGeneric"));
-    this->InteractionIcon = CreateDefaultSubobject<USHInteractionIconComponent>(TEXT("InteractionIcon"));
-    this->InteractionDetectable = CreateDefaultSubobject<USHRaycastDetectableComponent>(TEXT("InteractionDetectable"));
-    this->InteractionDetectableShape = CreateDefaultSubobject<UBoxComponent>(TEXT("InteractionDetectableShape"));
-    this->AnimSpot = CreateDefaultSubobject<UCapsuleComponent>(TEXT("AnimSpot"));
-    this->SHAkComponent = CreateDefaultSubobject<USHAkDynamicTickComponent>(TEXT("SHAkComponent"));
-    this->InteractionManager = CreateDefaultSubobject<USHInteractionManagerComponent>(TEXT("InteractionManager"));
+    // FIXME
+    // this->InteractionGeneric = CreateDefaultSubobject<USHInteractionGenericComponent>(TEXT("InteractionGeneric"));
+    // this->InteractionIcon = CreateDefaultSubobject<USHInteractionIconComponent>(TEXT("InteractionIcon"));
+    // this->InteractionDetectable = CreateDefaultSubobject<USHRaycastDetectableComponent>(TEXT("InteractionDetectable"));
+    // this->InteractionDetectableShape = CreateDefaultSubobject<UBoxComponent>(TEXT("InteractionDetectableShape"));
+    // this->AnimSpot = CreateDefaultSubobject<UCapsuleComponent>(TEXT("AnimSpot"));
+    // this->SHAkComponent = CreateDefaultSubobject<USHAkDynamicTickComponent>(TEXT("SHAkComponent"));
+    // this->InteractionManager = CreateDefaultSubobject<USHInteractionManagerComponent>(TEXT("InteractionManager"));
+    // this->AnimSpot->SetupAttachment(RootComponent);
+    // this->InteractionDetectable->SetupAttachment(InteractionGeneric);
+    // this->InteractionDetectableShape->SetupAttachment(InteractionDetectable);
+    // this->InteractionGeneric->SetupAttachment(RootComponent);
+    // this->InteractionIcon->SetupAttachment(InteractionGeneric);
+    // this->SHAkComponent->SetupAttachment(RootComponent);
     this->InteractingCharacter = NULL;
-    this->AnimSpot->SetupAttachment(RootComponent);
-    this->InteractionDetectable->SetupAttachment(InteractionGeneric);
-    this->InteractionDetectableShape->SetupAttachment(InteractionDetectable);
-    this->InteractionGeneric->SetupAttachment(RootComponent);
-    this->InteractionIcon->SetupAttachment(InteractionGeneric);
-    this->SHAkComponent->SetupAttachment(RootComponent);
-}
+    }
 
 void ASHDoorAttachment::UnregisterInteractionAnimation(const FPlayAnimationData& AnimToPlay) {
 }

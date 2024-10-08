@@ -2,8 +2,7 @@
 #include "SHCameraComponent.h"
 
 ASHCameraActor::ASHCameraActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USHCameraComponent>(TEXT("CameraComponent"))) {
-    const FProperty* p_CameraComponent = GetClass()->FindPropertyByName("CameraComponent");
-    (*p_CameraComponent->ContainerPtrToValuePtr<UCameraComponent*>(this))->SetupAttachment(RootComponent);
+    // FIXME
 }
 
 USHCameraComponent* ASHCameraActor::GetSHCameraComponent() const {

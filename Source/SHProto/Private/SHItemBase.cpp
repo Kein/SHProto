@@ -4,12 +4,13 @@
 #include "SHItemAudioComponent.h"
 
 ASHItemBase::ASHItemBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-    this->AudioComponent = CreateDefaultSubobject<USHItemAudioComponent>(TEXT("AudioComponent"));
+    // FIXME
+    //this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    //this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+    //this->AudioComponent = CreateDefaultSubobject<USHItemAudioComponent>(TEXT("AudioComponent"));
     this->InteractingCharacter = NULL;
-    this->AudioComponent->SetupAttachment(RootComponent);
-    this->Mesh->SetupAttachment(RootComponent);
+    //this->AudioComponent->SetupAttachment(RootComponent);
+    //this->Mesh->SetupAttachment(RootComponent);
 }
 
 bool ASHItemBase::Unequip() {

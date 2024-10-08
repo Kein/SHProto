@@ -3,15 +3,16 @@
 #include "SHAkItemWeaponBaseAudioComponent.h"
 
 ASHItemWeapon::ASHItemWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USkeletalMeshComponent>(TEXT("Mesh"))) {
-    this->WeaponItemAudioComponent = CreateDefaultSubobject<USHAkItemWeaponBaseAudioComponent>(TEXT("WeaponAudioComponent"));
+    // FIXME
+    //this->WeaponItemAudioComponent = CreateDefaultSubobject<USHAkItemWeaponBaseAudioComponent>(TEXT("WeaponAudioComponent"));
+    //this->Mesh->SetupAttachment(RootComponent);
+    //this->WeaponItemAudioComponent->SetupAttachment(RootComponent);
     this->AutoUnequipTime = 7.50f;
     this->AutoUnequipTimeInWater = 1.50f;
     this->TargetingMinViewDotProduct = 0.00f;
     this->TargetingAngleScoreCurve = NULL;
     this->TargetingDistanceScoreCurve = NULL;
     this->bUseWeaponMovementSet = false;
-    this->Mesh->SetupAttachment(RootComponent);
-    this->WeaponItemAudioComponent->SetupAttachment(RootComponent);
 }
 
 void ASHItemWeapon::SetMeshHidden(const bool InWantHidden, const UObject* Object) {

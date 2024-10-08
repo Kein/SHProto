@@ -3,14 +3,15 @@
 #include "Components/SceneComponent.h"
 
 ASHItemSpawner::ASHItemSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+	// FIXME
     this->bSaveGame = true;
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    //this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
     this->DebugMeshPreview = NULL;
-    this->DebugInteractionDetectableShapePreview = CreateDefaultSubobject<UBoxComponent>(TEXT("DebugInteractionDetectableShapePreview"));
+    //this->DebugInteractionDetectableShapePreview = CreateDefaultSubobject<UBoxComponent>(TEXT("DebugInteractionDetectableShapePreview"));
     this->bAutoRespawnOnStreaming = true;
     this->bShouldRespawnItem = false;
     this->SpawnedItemPtr = NULL;
-    this->DebugInteractionDetectableShapePreview->SetupAttachment(RootComponent);
+    //this->DebugInteractionDetectableShapePreview->SetupAttachment(RootComponent);
 }
 
 ASHItem* ASHItemSpawner::SpawnRuntimeItem() {

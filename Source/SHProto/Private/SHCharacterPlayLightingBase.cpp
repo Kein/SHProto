@@ -2,7 +2,8 @@
 #include "Components/SceneComponent.h"
 
 ASHCharacterPlayLightingBase::ASHCharacterPlayLightingBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+	// FIXME
+    // this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 }
 
 

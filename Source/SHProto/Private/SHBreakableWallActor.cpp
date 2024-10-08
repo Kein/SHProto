@@ -16,8 +16,6 @@ ASHBreakableWallActor::ASHBreakableWallActor(const FObjectInitializer& ObjectIni
     this->PortalBoundsBoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("PortalBoundsBoxComponent"));
     this->AkPortalOpenableComponent = CreateDefaultSubobject<USHAkPortalOpenableComponent>(TEXT("AkPortalOpenableComponent"));
     this->VisualMeshesPivotComponent = CreateDefaultSubobject<USceneComponent>(TEXT("VisualMeshesPivotComponent"));
-    this->BreakStepAudioEvent = NULL;
-    this->LastBreakAudioEvent = NULL;
     this->AkPortalOpenableComponent->SetupAttachment(PortalBoundsBoxComponent);
     this->AkSoundComponent->SetupAttachment(BreakableMeshMainComponent);
     this->BreakableMeshMainComponent->SetupAttachment(RootComponent);
@@ -25,6 +23,8 @@ ASHBreakableWallActor::ASHBreakableWallActor(const FObjectInitializer& ObjectIni
     this->SecondaryTargetBackComponent->SetupAttachment(BreakableMeshMainComponent);
     this->SecondaryTargetFrontComponent->SetupAttachment(BreakableMeshMainComponent);
     this->VisualMeshesPivotComponent->SetupAttachment(RootComponent);
+    this->BreakStepAudioEvent = NULL;
+    this->LastBreakAudioEvent = NULL;
 }
 
 void ASHBreakableWallActor::ProcessBreakableMeshMainComponentBreakEvent(USHBreakableMeshComponent* InComponentPtr) {

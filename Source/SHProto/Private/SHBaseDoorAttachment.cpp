@@ -3,11 +3,12 @@
 #include "Components/SphereComponent.h"
 
 ASHBaseDoorAttachment::ASHBaseDoorAttachment(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    this->ProximitySphere = CreateDefaultSubobject<USphereComponent>(TEXT("ProximitySphere"));
+    // FIXME
+    // this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    // this->ProximitySphere = CreateDefaultSubobject<USphereComponent>(TEXT("ProximitySphere"));
+    // this->ProximitySphere->SetupAttachment(RootComponent);
     this->bShouldManageDoorDetectable = true;
     this->DoorActor = NULL;
-    this->ProximitySphere->SetupAttachment(RootComponent);
 }
 
 void ASHBaseDoorAttachment::SetDoorActorFrozen(bool Inset) {

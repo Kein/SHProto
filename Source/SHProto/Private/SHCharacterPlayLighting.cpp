@@ -3,10 +3,15 @@
 #include "Components/SpotLightComponent.h"
 
 ASHCharacterPlayLighting::ASHCharacterPlayLighting(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->LightCharacterBack = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterBack"));
-    this->LightCharacterFace = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterFace"));
-    this->LightCharacterSide = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterSide"));
-    this->FlashlightOffSupportLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("FlashlightOffSupportLight"));
+    // FIXME
+    // this->LightCharacterBack = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterBack"));
+    // this->LightCharacterFace = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterFace"));
+    // this->LightCharacterSide = CreateDefaultSubobject<USpotLightComponent>(TEXT("LightCharacterSide"));
+    // this->FlashlightOffSupportLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("FlashlightOffSupportLight"));
+    // this->LightCharacterBack->SetupAttachment(RootComponent);
+    // this->LightCharacterFace->SetupAttachment(RootComponent);
+    // this->LightCharacterSide->SetupAttachment(RootComponent);
+    // this->FlashlightOffSupportLight->SetupAttachment(RootComponent);
     this->LightCharacterBackMinIntensity = 200.00f;
     this->LightCharacterBackFlashlightMod = 0.90f;
     this->bLightCharacterBackCastShadowsWhenMin = false;
@@ -21,10 +26,6 @@ ASHCharacterPlayLighting::ASHCharacterPlayLighting(const FObjectInitializer& Obj
     this->bLightCharacterSideCastShadowsWhenFlashlightMod = false;
     this->FlashlightOffSupportLightDefaultIntensity = 0.01f;
     this->FlashlightOffSupportLightIntensityCurve = NULL;
-    this->FlashlightOffSupportLight->SetupAttachment(RootComponent);
-    this->LightCharacterBack->SetupAttachment(RootComponent);
-    this->LightCharacterFace->SetupAttachment(RootComponent);
-    this->LightCharacterSide->SetupAttachment(RootComponent);
 }
 
 void ASHCharacterPlayLighting::SetFlashlightOffSupportLightProgress(float ProgressValue) {
