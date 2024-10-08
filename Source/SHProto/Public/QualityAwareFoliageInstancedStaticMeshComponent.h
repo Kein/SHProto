@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ELightSignificanceLevel -FallbackName=ELightSignificanceLevel
+#include "LightSignificanceLevel.h"
 #include "FoliageInstancedStaticMeshComponent.h"
 #include "QualityAwareFoliageInstancedStaticMeshComponent.generated.h"
 

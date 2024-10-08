@@ -19,7 +19,9 @@ public:
     UPROPERTY(EditAnywhere)
     float DefaultMin;
     
-    UDistributionFloatUniformParam();
+    // UDistributionFloatUniformParam();
+
+    virtual bool IsPostLoadThreadSafe() const override { return true; };
 
 };
 

@@ -5,9 +5,13 @@
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SHPROTO_API UAmbientSpotLightComponent : public USpotLightComponent {
-    GENERATED_BODY()
+	GENERATED_UCLASS_BODY()
 public:
-    UAmbientSpotLightComponent(const FObjectInitializer& ObjectInitializer);
+    //UAmbientSpotLightComponent(const FObjectInitializer& ObjectInitializer);
+
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override {};
+#endif
 
 };
 

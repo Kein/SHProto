@@ -1,6 +1,5 @@
 #include "DistributionVectorUniformParam.h"
 
-UDistributionVectorUniformParam::UDistributionVectorUniformParam() {
-}
+//UDistributionVectorUniformParam::UDistributionVectorUniformParam() {}
 
 

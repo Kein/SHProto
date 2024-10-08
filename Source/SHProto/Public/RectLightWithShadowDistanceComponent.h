@@ -5,7 +5,7 @@
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SHPROTO_API URectLightWithShadowDistanceComponent : public URectLightComponent {
-    GENERATED_BODY()
+    GENERATED_UCLASS_BODY()
 public:
     UPROPERTY(EditAnywhere)
     float ShadowMaxDrawDistance;
@@ -13,7 +13,10 @@ public:
     UPROPERTY(EditAnywhere)
     float ShadowMaxDistanceFadeRange;
     
-    URectLightWithShadowDistanceComponent(const FObjectInitializer& ObjectInitializer);
+    // URectLightWithShadowDistanceComponent(const FObjectInitializer& ObjectInitializer);
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override {};
+#endif
 
 };
 

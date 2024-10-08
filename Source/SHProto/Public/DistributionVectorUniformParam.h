@@ -20,7 +20,9 @@ public:
     UPROPERTY(EditAnywhere)
     FVector DefaultMin;
     
-    UDistributionVectorUniformParam();
+    //UDistributionVectorUniformParam();
+
+	virtual bool IsPostLoadThreadSafe() const override { return true; };
 
 };
 
