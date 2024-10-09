@@ -8,17 +8,17 @@ struct FIKFootLocation {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
-    FVector LimbRootLocation = {0,0,0};
+    FVector LimbRootLocation;
     
     UPROPERTY(EditAnywhere)
-    FVector OriginLocation = {0,0,0};
+    FVector OriginLocation;
     
     UPROPERTY(EditAnywhere)
-    FVector ActualLocation = {0,0,0};
+    FVector ActualLocation;
     
     UPROPERTY(EditAnywhere)
-    FVector NewLocation = {0,0,0};
+    FVector NewLocation;
     
-    //CUSTOMANIMNODE_API FIKFootLocation();
+    CUSTOMANIMNODE_API FIKFootLocation();
 };
 

@@ -7,7 +7,7 @@ struct LEVELSTREAMING_API FStreamableLevelHandle {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(SaveGame, EditAnywhere)
+    UPROPERTY(SaveGame, VisibleAnywhere)
     FName UniqueLevelId;
     
 public:

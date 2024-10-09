@@ -1,5 +1,4 @@
 #include "IKFootLocation.h"
 
-FIKFootLocation::FIKFootLocation() {
-}
+//FIKFootLocation::FIKFootLocation() {}
 

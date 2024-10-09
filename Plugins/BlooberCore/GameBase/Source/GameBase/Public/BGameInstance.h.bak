@@ -15,7 +15,7 @@ class URebindableInput;
 class USaveWidget;
 class UTexture2D;
 
-UCLASS(config=Game, NonTransient)
+UCLASS(NonTransient)
 class GAMEBASE_API UBGameInstance : public UGameInstance, public IGlobalPropertiesDataProvider {
     GENERATED_BODY()
 public:

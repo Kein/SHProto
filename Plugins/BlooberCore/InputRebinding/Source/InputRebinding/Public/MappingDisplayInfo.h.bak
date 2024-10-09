@@ -4,7 +4,7 @@
 #include "ActionDisplayInfo.h"
 #include "AnalogAxisInfo.h"
 #include "AxisDisplayInfo.h"
-#include "InputState_1.h"
+#include "InputState.h"
 #include "ToggleableInfo.h"
 #include "UE4InputHandle.h"
 #include "MappingDisplayInfo.generated.h"
